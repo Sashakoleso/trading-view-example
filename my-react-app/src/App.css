@@ -1,0 +1,220 @@
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.App {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.app-header h1 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.refresh-button {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.refresh-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.symbol-selector {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.symbol-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.symbol-input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  outline: none;
+}
+
+.symbol-input:focus {
+  border-color: #1976d2;
+}
+
+.symbol-button {
+  padding: 10px 30px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.symbol-button:hover {
+  background: #1565c0;
+}
+
+.popular-symbols {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.symbol-chip {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.symbol-chip:hover {
+  background: #e0e0e0;
+}
+
+.symbol-chip.active {
+  background: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #ef9a9a;
+}
+
+.quote-header {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.quote-header.loading {
+  text-align: center;
+  color: #666;
+}
+
+.quote-symbol h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.quote-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.change {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+.change.positive {
+  color: #26a69a;
+  background: #e0f2f1;
+}
+
+.change.negative {
+  color: #ef5350;
+  background: #ffebee;
+}
+
+.quote-info {
+  display: flex;
+  gap: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-loading,
+.chart-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+.custom-tooltip {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-tooltip p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+.tooltip-time {
+  font-weight: 600;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}

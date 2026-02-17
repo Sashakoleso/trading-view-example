@@ -1,0 +1,183 @@
+.chart-wrapper {
+  position: relative;
+}
+
+.chart-container {
+  width: 100%;
+  border-radius: 12px;
+  background: #3f3f3f;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.chart-reset-button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: system-ui;
+  background: rgba(148, 163, 184, 0.1);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.chart-reset-button:hover {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chart-title {
+  font-family: system-ui;
+  color: #006eff;
+}
+
+.chart-status {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.chart-status.loading {
+  color: #94a3b8;
+}
+
+.chart-status.connected {
+  color: #22c55e;
+}
+
+.chart-status.disconnected {
+  color: #ef4444;
+}
+
+.currency-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.currency-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: system-ui;
+  font-weight: 500;
+  background: rgba(148, 163, 184, 0.1);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.currency-button.up {
+  color: #22c55e;
+}
+
+.currency-button.down {
+  color: #ef4444;
+}
+
+.currency-button:hover {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.currency-button.active {
+  background: #22c55e;
+  color: #000;
+}
+
+.currency-button.active.up {
+  background: #22c55e;
+  animation: flashGreen 0.3s ease-out;
+}
+
+.currency-button.active.down {
+  background: #ef4444;
+  animation: flashRed 0.3s ease-out;
+}
+
+@keyframes flashGreen {
+  0% { background: #22c55e; }
+  50% { background: #4ade80; }
+  100% { background: #22c55e; }
+}
+
+@keyframes flashRed {
+  0% { background: #ef4444; }
+  50% { background: #f87171; }
+  100% { background: #ef4444; }
+}
+
+.screener-table {
+  width: 100%;
+  margin-bottom: 16px;
+  border-collapse: collapse;
+  font-family: system-ui;
+  background: rgba(148, 163, 184, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.screener-table thead {
+  background: rgba(148, 163, 184, 0.1);
+}
+
+.screener-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.screener-table tbody tr {
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.screener-table tbody tr:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
+
+.screener-table tbody tr.active {
+  background: rgba(2, 92, 255, 0.15);
+  border-left: 3px solid #025cff;
+}
+
+.screener-table td {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.symbol-cell {
+  font-weight: 600;
+  color: #025cff;
+}
+
+.price-cell,
+.change-cell {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.price-cell.up,
+.change-cell.up {
+  color: #22c55e;
+}
+
+.price-cell.down,
+.change-cell.down {
+  color: #ef4444;
+}

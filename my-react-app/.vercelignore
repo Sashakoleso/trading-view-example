@@ -1,0 +1,14 @@
+node_modules
+.git
+*.log
+.env.local
+.env.*.local
+.DS_Store
+src
+public
+*.md
+tsconfig.json
+tsconfig.app.json
+tsconfig.node.json
+vite.config.ts
+eslint.config.js
